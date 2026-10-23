@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ज़मींदार कार डेकोर | Zamidara Car Decor - Bio Link</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDark: '#121212',
+                        brandCard: '#1E1E1E',
+                        brandAccent: '#EAB308', // Amber/Gold tone for car decor luxury look
+                        brandRed: '#DC2626',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+            color: #f3f4f6;
+            min-height: 100vh;
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(234, 179, 8, 0.2);
+        }
+        .glow-button:hover {
+            box-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #121212;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased flex flex-col items-center justify-start py-6 px-4 sm:px-6">
+
+    <!-- Toast Notification Box -->
+    <div id="toast" class="fixed top-5 z-50 transform -translate-y-20 opacity-0 transition-all duration-300 bg-brandAccent text-black font-semibold px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-lg"></i>
+        <span id="toast-message">Copied to clipboard!</span>
+    </div>
+
+    <!-- Main Container Card (Mobile Optimized Max-Width) -->
+    <div class="w-full max-w-md bg-brandCard/90 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl overflow-hidden relative">
+        
+        <!-- Header Banner with Gradient & Verified Badge -->
+        <div class="h-32 bg-gradient-to-r from-amber-600 via-yellow-500 to-amber-700 relative flex justify-end p-4">
+            <button onclick="shareProfile()" class="bg-black/40 hover:bg-black/60 text-white w-10 h-10 rounded-full flex items-center justify-center backdrop-blur-sm transition-all cursor-pointer" title="Share Profile">
+                <i class="fa-solid fa-share-nodes"></i>
+            </button>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="px-6 pb-6 pt-0 relative flex flex-col items-center text-center -mt-16">
+            <!-- Profile Avatar with Glow -->
+            <div class="relative mb-3">
+                <div class="w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-yellow-400 to-amber-600 glow-effect">
+                    <img src="https://placehold.co/200x200/121212/EAB308?text=ZCD" alt="Zamidara Car Decor Logo" class="w-full h-full object-cover rounded-full bg-black">
+                </div>
+                <span class="absolute bottom-1 right-1 bg-blue-500 text-white text-xs w-6 h-6 rounded-full flex items-center justify-center border-2 border-brandCard shadow" title="Verified Business">
+                    <i class="fa-solid fa-check text-[10px]"></i>
+                </span>
+            </div>
+
+            <!-- Business Name & Handle -->
+            <h1 class="text-2xl font-bold tracking-tight text-white flex items-center justify-center gap-2">
+                ज़मींदार कार डेकोर
+            </h1>
+            <p class="text-amber-400 font-medium text-sm mt-0.5">Zamidara Car Decor</p>
+            <p class="text-gray-400 text-xs mt-1 flex items-center justify-center gap-1">
+                <i class="fa-solid fa-location-dot text-amber-500"></i> Hisar, Haryana
+            </p>
+
+            <!-- Instagram Stats Bar -->
+            <div class="grid grid-cols-3 gap-2 w-full my-5 bg-black/40 border border-white/5 rounded-2xl p-3 text-center">
+                <div>
+                    <div class="text-white font-bold text-base">12</div>
+                    <div class="text-gray-400 text-[11px] uppercase tracking-wider">Posts</div>
+                </div>
+                <div class="border-x border-white/10">
+                    <div class="text-white font-bold text-base">640</div>
+                    <div class="text-gray-400 text-[11px] uppercase tracking-wider">Followers</div>
+                </div>
+                <div>
+                    <div class="text-white font-bold text-base">0</div>
+                    <div class="text-gray-400 text-[11px] uppercase tracking-wider">Following</div>
+                </div>
+            </div>
+
+            <!-- Bio Description Card -->
+            <div class="w-full bg-white/5 border border-white/10 rounded-2xl p-4 text-left text-sm text-gray-300 leading-relaxed mb-6 space-y-2">
+                <p class="font-semibold text-amber-300 flex items-center gap-2">
+                    <i class="fa-solid fa-car-side"></i> Car Accessories & Modification
+                </p>
+                <p class="text-gray-200">
+                    हमारे यहाँ पर हर तरह की गाड़ी को बेस से टॉप और मॉडिफाई किया जाता हैं! 🚗✨
+                </p>
+                <div class="pt-2 border-t border-white/10 text-xs text-gray-400 flex items-start gap-2">
+                    <i class="fa-solid fa-store text-amber-400 mt-0.5"></i>
+                    <span>Shop no. 807, Phase - 2, Gate no. 1, Auto Market, Hisar</span>
+                </div>
+            </div>
+
+            <!-- Action Link Buttons (Bio Links List) -->
+            <div class="w-full space-y-3.5">
+                <!-- Call Now Button -->
+                <a href="tel:7015386868" class="group flex items-center justify-between p-3.5 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white rounded-2xl font-semibold shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-phone-volume"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-emerald-100 font-normal">Direct Call</div>
+                            <div class="text-sm font-bold tracking-wide">7015386868</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-sm opacity-75 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- WhatsApp Enquiry Button -->
+                <a href="https://wa.me/917015386868?text=Hello%20Zamidara%20Car%20Decor,%20I%20want%20to%20know%20more%20about%20car%20accessories%20and%20modification." target="_blank" class="group flex items-center justify-between p-3.5 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-500 hover:to-teal-500 text-white rounded-2xl font-semibold shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-xl">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-green-100 font-normal">Chat on WhatsApp</div>
+                            <div class="text-sm font-bold tracking-wide">Instant Quote</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-sm opacity-75 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- Instagram Profile Link -->
+                <a href="https://instagram.com/zamidaracardecor" target="_blank" class="group flex items-center justify-between p-3.5 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500 hover:opacity-95 text-white rounded-2xl font-semibold shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center text-xl">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-pink-100 font-normal">Instagram Profile</div>
+                            <div class="text-sm font-bold tracking-wide">@zamidaracardecor</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-sm opacity-75 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- Google Maps Navigation Button -->
+                <a href="https://maps.google.com/?q=Auto+Market+Hisar+Phase+2+Gate+1" target="_blank" class="group flex items-center justify-between p-3.5 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-black rounded-2xl font-semibold shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-black/10 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-black/70 font-normal">Shop Location</div>
+                            <div class="text-sm font-bold tracking-wide">Auto Market, Hisar</div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-arrow-right text-sm opacity-75 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+
+                <!-- QR Code Generator Card Toggle Button -->
+                <button onclick="toggleQRCode()" class="w-full group flex items-center justify-between p-3.5 bg-neutral-800 hover:bg-neutral-700 text-white rounded-2xl font-semibold border border-white/10 shadow-md transition-all duration-300 cursor-pointer">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-qrcode"></i>
+                        </div>
+                        <div class="text-left">
+                            <div class="text-xs text-gray-400 font-normal">Quick Connect</div>
+                            <div class="text-sm font-bold tracking-wide">Show Business QR Code</div>
+                        </div>
+                    </div>
+                    <i id="qr-chevron" class="fa-solid fa-chevron-down text-sm text-gray-400 transition-transform"></i>
+                </button>
+
+                <!-- Expandable QR Code Section -->
+                <div id="qr-container" class="hidden bg-black/60 border border-amber-500/30 rounded-2xl p-4 text-center space-y-3 animate-fadeIn">
+                    <p class="text-xs text-gray-300 font-medium">Scan to save contact or visit digital bio link</p>
+                    <div class="bg-white p-3 rounded-xl inline-block shadow-inner">
+                        <!-- Dynamic generated QR Code using public API -->
+                        <img id="qr-code-img" src="" alt="Zamidara Car Decor QR Code" class="w-40 h-40 mx-auto rounded">
+                    </div>
+                    <div>
+                        <button onclick="copyLink()" class="bg-amber-500 hover:bg-amber-400 text-black text-xs font-bold py-2 px-4 rounded-xl transition-all shadow cursor-pointer">
+                            <i class="fa-solid fa-copy mr-1.5"></i> Copy Profile Link
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Services Tags -->
+            <div class="w-full mt-6 pt-6 border-t border-white/10 text-left">
+                <h3 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">Popular Services</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-amber-300">Seat Covers</span>
+                    <span class="text-xs bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-amber-300">Android Stereo</span>
+                    <span class="text-xs bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-amber-300">Base to Top Model</span>
+                    <span class="text-xs bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-amber-300">Modification</span>
+                    <span class="text-xs bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg text-amber-300">Lighting & Alloys</span>
+                </div>
+            </div>
+
+            <!-- Footer Branding -->
+            <div class="mt-8 text-center text-xs text-gray-500 space-y-1">
+                <p>© 2026 ज़मींदार कार डेकोर, हिसार। All Rights Reserved.</p>
+                <p class="text-[10px] text-gray-600">Professional Bio Link & QR Solution</p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- JavaScript functionality -->
+    <script>
+        // Set QR code source dynamically on load
+        window.addEventListener('DOMContentLoaded', () => {
+            const currentUrl = window.location.href;
+            const qrImg = document.getElementById('qr-code-img');
+            qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(currentUrl)}`;
+        });
+
+        // Toggle QR Code Card
+        function toggleQRCode() {
+            const container = document.getElementById('qr-container');
+            const chevron = document.getElementById('qr-chevron');
+            if (container.classList.contains('hidden')) {
+                container.classList.remove('hidden');
+                chevron.classList.add('rotate-180');
+            } else {
+                container.classList.add('hidden');
+                chevron.classList.remove('rotate-180');
+            }
+        }
+
+        // Show Toast Notification helper
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toast-message');
+            toastMsg.textContent = message;
+            toast.classList.remove('-translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('-translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // Copy Profile Link to Clipboard using fallback compatible method
+        function copyLink() {
+            const currentUrl = window.location.href;
+            const textarea = document.createElement('textarea');
+            textarea.value = currentUrl;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast('Link copied to clipboard!');
+            } catch (err) {
+                showToast('Failed to copy link');
+            }
+            document.body.removeChild(textarea);
+        }
+
+        // Share Profile Functionality
+        function shareProfile() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'ज़मींदार कार डेकोर - Hisar',
+                    text: 'Check out Zamidara Car Decor bio link for car accessories & modification!',
+                    url: window.location.href,
+                }).catch(() => {
+                    copyLink();
+                });
+            } else {
+                copyLink();
+            }
+        }
+    </script>
+</body>
+</html>
